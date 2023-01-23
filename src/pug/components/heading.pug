@@ -1,0 +1,5 @@
+mixin heading(title, className)
+	.heading(class=className)
+		h2!= title
+		a.heading__all(href='#') See all
+			+icon('chevron-right')

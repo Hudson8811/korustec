@@ -1,0 +1,32 @@
+.partners {
+	padding: 33px 0 64px;
+
+	@include max(lg) {
+		padding: 41px 0 120px;
+	}
+
+	@include max(md) {
+		padding: 10px 0 68px;
+	}
+
+	&__slider {
+		margin-top: 59px;
+
+		@include max(lg) {
+			margin-top: 34px;
+		}
+
+		@include max(md) {
+			margin-top: 26px;
+		}
+
+		.swiper-wrapper {
+			align-items: center;
+		}
+	}
+
+	&__item {
+		width: auto;
+		margin-right: 40px;
+	}
+}

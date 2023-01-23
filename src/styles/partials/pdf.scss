@@ -1,0 +1,121 @@
+.pdf {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	@include max(md) {
+		gap: 12px;
+	}
+
+	.select2-container--default {
+		&.select2-container--open .select2-selection--single {
+			border-color: $black;
+		}
+
+		.select2-selection--single {
+			height: 30px;
+			border-radius: 15px !important;
+			background-color: transparent;
+			border: 1px solid $grey-ca;
+			position: relative;
+			transition: 0.3s ease;
+
+			@include hover {
+				border-color: $black;
+			}
+
+			&::before {
+				content: 'PDF';
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 25px;
+				height: 16px;
+				border-radius: 3px;
+				background-color: $red;
+				position: absolute;
+				left: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-family: $thirdFont;
+				font-size: 10px;
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			.select2-selection {
+				&__rendered {
+					font-size: 12px;
+					color: $black-23;
+					padding: 0 12px 0 42px;
+				}
+
+				&__arrow {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__select-wrapper {
+		@include max(lg) {
+			order: 1;
+			flex-grow: 1;
+		}
+	}
+
+	&__download {
+		display: inline-flex;
+
+		@include hover {
+			svg {
+				fill: $black-23;
+			}
+		}
+
+		svg {
+			fill: $grey-ca;
+			transition: 0.3s ease;
+		}
+	}
+
+	&__select {
+		width: 206px;
+		opacity: 0;
+	}
+
+	&__quantity,
+	&__close {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 29px;
+		height: 29px;
+		border-radius: 50%;
+	}
+
+	&__quantity {
+		border: 1px solid $grey-ca;
+		background-color: transparent;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 300;
+		color: rgba($black-23, 0.8);
+		cursor: pointer;
+		transition: 0.3s ease;
+
+		@include hover {
+			border-color: $black;
+			color: $black;
+		}
+	}
+
+	&__close {
+		display: none;
+		background-color: $black-23;
+
+		svg {
+			stroke: $white;
+		}
+	}
+}

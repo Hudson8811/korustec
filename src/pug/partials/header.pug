@@ -1,0 +1,42 @@
+header.header
+	.container.container--big.header__container
+		.header__col
+			a.header__logo.d-none-mobile(href='/')
+				+icon('logo')(width='243', height='62')
+			a.header__logo.d-none-desktop(href='/')
+				+icon('logo-2')(width='145', height='37')
+			nav.header__menu
+				li
+					a(href='#', target='_blank') Publications
+				li
+					a(href='#', target='_blank') News
+				li
+					a(href='#', target='_blank') Events
+				li
+					a(href='#', target='_blank') Who we are
+				li
+					a(href='#', target='_blank') Partners
+		.header__col
+			include search.pug
+			include lang-switcher.pug
+			.header-m
+				input(type='search', name='search')
+				.header-m__burger-wrapper
+					.header-m__burger
+						span
+	.header-menu
+		a.header__logo(href='/')
+			+icon('logo-2')(width='145', height='37')
+		nav.header__menu
+			li
+				a(href='#', target='_blank') Publications
+			li
+				a(href='#', target='_blank') News
+			li
+				a(href='#', target='_blank') Events
+			li
+				a(href='#', target='_blank') Who we are
+			li
+				a(href='#', target='_blank') Partners
+		.header-menu__close
+			+icon('close')(width='7', height='7')

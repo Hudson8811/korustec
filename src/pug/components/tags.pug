@@ -1,0 +1,6 @@
+mixin tags(arr, className)
+	.tags(class=className)
+		span Key words :
+		.tags__wrapper
+			each item in arr
+				a.tags__item(href='#', title=item)!= item
