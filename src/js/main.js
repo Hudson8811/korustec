@@ -11,5 +11,4 @@
 //= ./partials/main.js
 //= ./partials/header.js
 //= ./partials/pdf.js
-//= ./partials/wave.js
 //= ./partials/sliders.js

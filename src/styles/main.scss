@@ -23,12 +23,20 @@
 @import "partials/tags";
 @import "partials/header";
 @import "partials/footer";
-@import "partials/filter";
+@import "partials/filter-switcher";
+@import "partials/filter-tags";
+@import "partials/check-switcher";
+@import "partials/key-words";
+@import "partials/pagination";
+@import "partials/caption";
+@import "partials/views";
+@import "partials/attachments";
 
 /* blocks */
 @import "blocks/card-publications";
 @import "blocks/card-news";
 @import "blocks/card-events";
+@import "blocks/archive";
 @import "blocks/first-screen";
 @import "blocks/mission";
 @import "blocks/publications";
@@ -36,3 +44,6 @@
 @import "blocks/events";
 @import "blocks/partners";
 @import "blocks/partners-page";
+@import "blocks/publications-page";
+@import "blocks/publications-single";
+@import "blocks/news-page";

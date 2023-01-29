@@ -59,6 +59,16 @@ function scripts() {
 		.pipe(browserSync.stream())
 }
 
+function additionalScripts() {
+	return src([
+		'src/js/partials/wave.js'
+	])
+		.pipe(plumber())
+		.pipe(uglify())
+		.pipe(dest('public/js/'))
+		.pipe(browserSync.stream())
+}
+
 function styles() {
 	return src('src/styles/main.scss')
 		.pipe(plumber())
@@ -132,11 +142,12 @@ exports.browsersync = browsersync;
 exports.startwatch = startwatch;
 exports.pugHtml = pugHtml;
 exports.scripts = scripts;
+exports.additionalScripts = additionalScripts;
 exports.styles = styles;
 exports.fonts = fonts;
 exports.images = images;
 exports.icons = icons;
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
+exports.build = series(cleandist, pugHtml, fonts, styles, scripts, additionalScripts, images, icons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, additionalScripts, images, icons, browsersync, startwatch);

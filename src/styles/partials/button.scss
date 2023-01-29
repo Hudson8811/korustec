@@ -26,4 +26,14 @@
 		background-color: $grey-f5;
 		color: $black;
 	}
+
+	&--black {
+		border-color: $black-23;
+		color: $black-23;
+
+		&:hover {
+			background-color: $blue-0a;
+			color: $grey-f5;
+		}
+	}
 }

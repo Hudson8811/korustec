@@ -14,10 +14,10 @@ body {
 main {
 	flex-grow: 1;
 	overflow: hidden;
-	padding-top: 160px;
+	padding-top: 110px;
 
 	@include max(md) {
-		padding-top: 116px;
+		padding-top: 60px;
 	}
 }
 
@@ -78,6 +78,22 @@ input:focus-visible {
 	}
 }
 
+.d-none-flex-mobile {
+	display: flex !important;
+
+	@include max(md) {
+		display: none !important;
+	}
+}
+
+.d-none-flex-desktop {
+	display: none !important;
+
+	@include max(md) {
+		display: flex !important;
+	}
+}
+
 
 /**
  *  Typography
@@ -99,10 +115,12 @@ h1 {
 	@include max(md) {
 		font-size: 50px;
 		line-height: 61px;
+		margin-left: 0;
 	}
 }
 
-h2 {
+h2,
+.h2 {
 	font-size: 77px;
 	line-height: 93px;
 
@@ -112,10 +130,19 @@ h2 {
 	}
 }
 
+.h2 {
+	font-weight: 700;
+}
+
 h3 {
 	font-size: 50px;
 	line-height: 61px;
 	color: $black;
+
+	@include max(md) {
+		font-size: 28px;
+		line-height: 32px;
+	}
 }
 
 h4 {
