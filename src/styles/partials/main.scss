@@ -34,6 +34,39 @@ ul {
 	list-style: none;
 }
 
+ul.list {
+	li {
+		position: relative;
+		padding-left: 55px;
+		line-height: 19px;
+		letter-spacing: 0.02em;
+		word-break: break-word;
+
+		@include max(md) {
+			padding-left: 32px;
+		}
+
+		& + li {
+			margin-top: 12px;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 44px;
+			height: 3px;
+			background-color: $blue-0a;
+			position: absolute;
+			top: 8px;
+			left: 0;
+
+			@include max(md) {
+				width: 22px;
+			}
+		}
+	}
+}
+
 input:focus-visible {
 	outline: none;
 }
@@ -206,6 +239,14 @@ h4 {
 
 	&--offline::before {
 		background: linear-gradient(139deg, #ff0000 0%, #4b0000 115.87%);
+	}
+
+	&--dark {
+		color: $black-23;
+	}
+
+	&--align-left {
+		justify-content: flex-start;
 	}
 }
 

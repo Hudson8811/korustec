@@ -1,5 +1,5 @@
 mixin caption(type, value, text, className)
-	.caption(class=className)
+	.caption(class=text ? className + ' caption--with-text' : className)
 		.caption__type!= type
 			if value
 				span!= value

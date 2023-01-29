@@ -51,4 +51,36 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	const eventsSlider2 = new Swiper('.js-slider-events-2', {
+		slidesPerView: 1.27,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.events-page__slider-next',
+			prevEl: '.events-page__slider-prev',
+		},
+		breakpoints: {
+			640: {
+				slidesPerView: 2.5
+			},
+			1280: {
+				slidesPerView: 4.22,
+				spaceBetween: 35
+			}
+		}
+	});
+
+	const photoSlider = new Swiper('.js-slider-photo', {
+		slidesPerView: 1.27,
+		spaceBetween: 10,
+		breakpoints: {
+			640: {
+				slidesPerView: 1.5
+			},
+			1280: {
+				slidesPerView: 2.2,
+				spaceBetween: 20
+			}
+		}
+	});
 })
