@@ -17,7 +17,8 @@ html(lang="ru")
 		block header
 			include ../partials/header.pug
 
-		main.main
+		- let modClass = mainModClass ? ' ' + mainModClass : '';
+		main.main(class=modClass)
 			block main
 
 		block footer

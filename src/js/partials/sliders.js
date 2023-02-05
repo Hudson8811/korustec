@@ -83,4 +83,24 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	const historySlider = new Swiper('.js-slider-history', {
+		slidesPerView: 1.27,
+		spaceBetween: 0,
+		freeMode: true,
+		loop: true,
+		autoplay: {
+			delay: 1,
+			disableOnInteraction: false
+		},
+		speed: 14000,
+		breakpoints: {
+			640: {
+				slidesPerView: 1.5
+			},
+			1280: {
+				slidesPerView: 3.74
+			}
+		}
+	});
 })

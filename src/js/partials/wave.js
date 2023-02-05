@@ -5,7 +5,7 @@ let camera, scene, renderer;
 
 let particles, count = 0;
 
-let mouseX = 0, mouseY = 0;
+let mouseX = 600, mouseY = -200;
 
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;

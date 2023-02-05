@@ -83,6 +83,10 @@
 		}
 	}
 
+	&__container {
+		overflow: hidden;
+	}
+
 	&__container-full {
 		max-width: 1600px;
 		margin-top: 42px;
@@ -150,6 +154,11 @@
 			@include max(md989) {
 				display: none;
 			}
+		}
+
+		span {
+			position: sticky;
+			top: 0;
 		}
 	}
 

@@ -93,27 +93,27 @@
 			display: none;
 		}
 
-		li {
+		& > li {
 			height: 100%;
-			background-color: $white;
-			overflow: hidden;
+			position: relative;
 
-			&:first-child {
-				border-top-left-radius: 18px;
-				border-bottom-left-radius: 18px;
-
-				a {
-					padding-left: 50px;
+			@include hover {
+				ul {
+					opacity: 1;
+					pointer-events: auto;
 				}
 			}
 
-			&:last-child {
+			&:first-child a {
+				border-top-left-radius: 18px;
+				border-bottom-left-radius: 18px;
+				padding-left: 50px;
+			}
+
+			&:last-child a {
 				border-top-right-radius: 18px;
 				border-bottom-right-radius: 18px;
-
-				a {
-					padding-right: 50px;
-				}
+				padding-right: 50px;
 			}
 
 			a {
@@ -122,13 +122,36 @@
 				font-size: 16px;
 				line-height: 19px;
 				color: $grey-f5;
+				text-decoration: none;
 				background-color: $blue-0a;
 				padding: 9.5px 20px;
-				transition: 0.3s ease;
+				position: relative;
 
 				@include hover {
-					background-color: $white;
-					color: $black-23;
+					text-decoration: underline;
+					text-decoration-color: rgba(245, 245, 245, 0.6);
+					text-decoration-thickness: 3px;
+					text-underline-offset: 4px;
+				}
+			}
+
+			ul {
+				width: 100%;
+				opacity: 0;
+				pointer-events: none;
+				position: absolute;
+				top: 100%;
+				transition: 0.3s ease;
+
+				li {
+					&:last-child a {
+						border-bottom-right-radius: 18px;
+						border-bottom-left-radius: 18px;
+					}
+
+					a {
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -156,7 +179,6 @@
 
 			li {
 				height: auto;
-				border-radius: 18px;
 
 				a {
 					width: 200px;
@@ -164,6 +186,7 @@
 					font-size: 14px;
 					line-height: 15px;
 					text-align: center;
+					border-radius: 18px;
 				}
 			}
 		}

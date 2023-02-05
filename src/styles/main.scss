@@ -13,6 +13,7 @@
 @import "libs/swiper-bundle.min.css";
 @import "libs/aos.css";
 @import "libs/select2.min.css";
+@import "libs/jquery-ui.css";
 
 /* components */
 @import "partials/button";
@@ -40,6 +41,7 @@
 @import "blocks/table";
 @import "blocks/photo-slider";
 @import "blocks/archive";
+@import "blocks/history";
 @import "blocks/first-screen";
 @import "blocks/mission";
 @import "blocks/publications";
@@ -52,3 +54,5 @@
 @import "blocks/news-page";
 @import "blocks/events-page";
 @import "blocks/events-single";
+@import "blocks/about-page";
+@import "blocks/search-page";

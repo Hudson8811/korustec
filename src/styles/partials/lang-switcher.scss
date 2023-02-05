@@ -46,11 +46,13 @@
 			&--highlighted.select2-results__option--selectable {
 				background-color: $blue-0a;
 				color: $white;
-				transition: 0.3s ease;
+				text-decoration: none;
 
 				@include hover {
-					background-color: $white;
-					color: $blue-0a;
+					text-decoration: underline;
+					text-decoration-color: rgba(245, 245, 245, 0.6);
+					text-decoration-thickness: 3px;
+					text-underline-offset: 4px;
 				}
 			}
 		}

@@ -200,4 +200,9 @@
 			max-width: 542px;
 		}
 	}
+
+	&__attachments {
+		position: sticky;
+		top: 100px;
+	}
 }

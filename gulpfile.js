@@ -29,6 +29,7 @@ function browsersync() {
 
 function startwatch() {
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
+	watch(['src/**/*.js', '!src/**/*.min.js'], additionalScripts);
 	watch('src/**/styles/**/*', styles);
 	watch('src/**/*.html').on('change', browserSync.reload);
 	watch('src/images/**/*', images);
@@ -61,7 +62,8 @@ function scripts() {
 
 function additionalScripts() {
 	return src([
-		'src/js/partials/wave.js'
+		'src/js/partials/wave.js',
+		'src/js/partials/map.js'
 	])
 		.pipe(plumber())
 		.pipe(uglify())

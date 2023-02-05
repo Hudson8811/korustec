@@ -1,12 +1,37 @@
 $(document).ready(function() {
 	AOS.init();
 
+	$('.datepicker').datepicker({
+		changeMonth: true,
+		changeYear: true,
+		dateFormat: 'dd.mm.yy',
+		yearRange: '2000:2040',
+		monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	}).inputmask({
+		alias: 'datetime',
+		inputFormat: 'dd.mm.yyyy',
+		prefillYear: false,
+		placeholder: '_',
+		min: '01.01.2000',
+		max: '12.31.2040',
+		oncomplete: function() {
+			var arr = $(this).val().split('/'),
+				date = new Date(arr[2] + '-' + arr[1] + '-' + arr[0] + ' ' + '00:00:00');
+
+			$(this).datepicker( "setDate",  date);
+		}
+	});
+
 	$('.lang-switcher select').select2({
 		dropdownParent: $('.lang-switcher')
 	});
 
 	$('.key-words select').select2({
 		dropdownParent: $('.key-words')
+	});
+
+	$('.search-page__select select').select2({
+		dropdownParent: $('.search-page__select')
 	});
 
 	/* Add clear button on opening dropdown */

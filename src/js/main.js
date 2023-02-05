@@ -7,6 +7,8 @@
 //= ./libs/three.min.js
 //= ./libs/stats.min.js
 //= ./libs/jquery.marquee.min.js
+//= ./libs/jquery-ui.js
+//= ./libs/mask.js
 
 //= ./partials/main.js
 //= ./partials/header.js

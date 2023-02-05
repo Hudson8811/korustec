@@ -5,10 +5,11 @@ block vars
 		const page = {
 			title: 'Events | Korustec'
 		};
+	- let mainModClass = 'main--visible';
 
 block main
 	.events-page
-		.container
+		.container.events-page__container
 			h1 Events
 			.events-page__events.events
 				.events-page__subtitle
@@ -31,37 +32,32 @@ block main
 							.card-events__top
 								.card-events__date 20 / 09
 								.card-events__time 13:00 - 16:00
-							.card-events__content(style='background-image: url("images/events/1.jpg")')
+							.card-events__content(style='background-image: url("images/events/2.jpg")')
 								h4 Think Tank Needs to Build a National Research System
 								.card-events__status.status.status--offline Online
 						.card-events.swiper-slide
 							.card-events__top
-								.card-events__date 20 / 09
-								.card-events__time 13:00 - 16:00
-							.card-events__content(style='background-image: url("images/events/1.jpg")')
-								h4 Think Tank Needs to Build a National Research System
-								.card-events__status.status.status--offline Online
+								.card-events__date -- / --
+								.card-events__time --:-- - --:--
+							.card-events__content(style='background-image: url("images/events/ph.jpg")')
 						.card-events.swiper-slide
 							.card-events__top
-								.card-events__date 20 / 09
-								.card-events__time 13:00 - 16:00
-							.card-events__content(style='background-image: url("images/events/1.jpg")')
-								h4 Think Tank Needs to Build a National Research System
-								.card-events__status.status.status--online Online
+								.card-events__date -- / --
+								.card-events__time --:-- - --:--
+							.card-events__content(style='background-image: url("images/events/ph.jpg")')
 						.card-events.swiper-slide
 							.card-events__top
-								.card-events__date 20 / 09
-								.card-events__time 13:00 - 16:00
-							.card-events__content(style='background-image: url("images/events/1.jpg")')
-								h4 Think Tank Needs to Build a National Research System
-								.card-events__status.status.status--online Online
+								.card-events__date -- / --
+								.card-events__time --:-- - --:--
+							.card-events__content(style='background-image: url("images/events/ph.jpg")')
 		.container
 			.events-page__subtitle
 				span Past:
 		.container.events-page__container-full
 			.events-page__block
 				.events-page__year-list
-					.events-page__year-digit 20<br>22
+					.events-page__year-digit
+						span 20<br>22
 					.events-page__year-wrapper
 						.events-page__card-events-single.card-events-single
 							.card-events-single__image-wrapper
@@ -94,7 +90,8 @@ block main
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
 								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
 				.events-page__year-list
-					.events-page__year-digit 20<br>21
+					.events-page__year-digit
+						span 20<br>21
 					.events-page__year-wrapper
 						.events-page__card-events-single.card-events-single
 							.card-events-single__image-wrapper
