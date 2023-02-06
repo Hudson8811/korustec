@@ -9,6 +9,7 @@
 //= ./libs/jquery.marquee.min.js
 //= ./libs/jquery-ui.js
 //= ./libs/mask.js
+//= ./libs/fancybox.umd.js
 
 //= ./partials/main.js
 //= ./partials/header.js

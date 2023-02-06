@@ -92,6 +92,7 @@
 		width: 29px;
 		height: 29px;
 		border-radius: 50%;
+		cursor: pointer;
 	}
 
 	&__quantity {
@@ -101,7 +102,6 @@
 		line-height: 14px;
 		font-weight: 300;
 		color: rgba($black-23, 0.8);
-		cursor: pointer;
 		transition: 0.3s ease;
 
 		@include hover {
