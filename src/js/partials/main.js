@@ -22,8 +22,27 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.lang-switcher select').select2({
-		dropdownParent: $('.lang-switcher')
+	$(document).mouseup(function(e) {
+		const langSwitcher = $('.lang-switcher');
+
+		if (!langSwitcher.is(e.target) && langSwitcher.has(e.target).length === 0) {
+			langSwitcher.removeClass('open');
+		}
+	});
+
+	const langSwitcher = $('.lang-switcher');
+	const langSwitcherLinks = $('.lang-switcher a');
+
+	langSwitcher.on('click', function () {
+		$(this).addClass('open');
+	});
+
+	langSwitcherLinks.on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		langSwitcherLinks.removeAttr('style');
+		$(this).css('order', '-1');
+		$(this).closest('.lang-switcher').removeClass('open');
 	});
 
 	$('.key-words select').select2({

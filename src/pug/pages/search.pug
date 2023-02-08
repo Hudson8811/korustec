@@ -58,10 +58,13 @@ block main
 								a.pdf__download(href='#', download)
 									+icon('download')(width='19', height='18')
 								.pdf__select-wrapper
-									select.pdf__select
-										option Brain_Pool_announcement 1
-										option Brain_Pool_announcement 2
-								button.pdf__quantity +<span class="js-pdf-quantity">2</span>
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
@@ -74,10 +77,13 @@ block main
 								a.pdf__download(href='#', download)
 									+icon('download')(width='19', height='18')
 								.pdf__select-wrapper
-									select.pdf__select
-										option Brain_Pool_announcement 1
-										option Brain_Pool_announcement 2
-								button.pdf__quantity +<span class="js-pdf-quantity">2</span>
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
@@ -90,26 +96,13 @@ block main
 								a.pdf__download(href='#', download)
 									+icon('download')(width='19', height='18')
 								.pdf__select-wrapper
-									select.pdf__select
-										option Brain_Pool_announcement 1
-										option Brain_Pool_announcement 2
-								button.pdf__quantity +<span class="js-pdf-quantity">2</span>
-								.pdf__close
-									+icon('close')(width='7', height='7')
-							+tags(['new material'], 'card-news__tags')
-						.search-page__news-item.card-news.card-news--white
-							.card-news__date 27.03.2022
-							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
-							.card-news__text The Ministry of Science and ICT and National Research Foundation of
-								|  Korea are announcing the Call for 2021 Korea-Russia...
-							.card-news__pdf.pdf
-								a.pdf__download(href='#', download)
-									+icon('download')(width='19', height='18')
-								.pdf__select-wrapper
-									select.pdf__select
-										option Brain_Pool_announcement 1
-										option Brain_Pool_announcement 2
-								button.pdf__quantity +<span class="js-pdf-quantity">2</span>
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
@@ -122,13 +115,35 @@ block main
 								a.pdf__download(href='#', download)
 									+icon('download')(width='19', height='18')
 								.pdf__select-wrapper
-									select.pdf__select
-										option Brain_Pool_announcement 1
-										option Brain_Pool_announcement 2
-								button.pdf__quantity +<span class="js-pdf-quantity">2</span>
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
 								.pdf__close
 									+icon('close')(width='7', height='7')
-							+tags('', 'card-news__tags')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
+						.search-page__news-item.card-news.card-news--white
+							.card-news__date 27.03.2022
+							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-news__text The Ministry of Science and ICT and National Research Foundation of
+								|  Korea are announcing the Call for 2021 Korea-Russia...
+							.card-news__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
 						+pagination('search-page__pagination d-none-flex-mobile')
 						.search-page__button
 							+button('SHOW MORE', 'button--black d-none-flex-desktop', '#')

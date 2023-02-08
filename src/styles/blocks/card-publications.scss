@@ -8,7 +8,6 @@
 	border-radius: 8px;
 	padding: 35px;
 	background-color: $white;
-	overflow: hidden;
 
 	@include max(lg) {
 		padding: 10px;
@@ -26,8 +25,6 @@
 	}
 
 	&__col {
-		position: relative;
-
 		&:first-child {
 			min-width: 226px;
 			max-width: 226px;
@@ -48,13 +45,32 @@
 		flex-grow: 1;
 	}
 
+	&__image-wrapper {
+		width: calc(100% + 35px);
+		height: calc(100% + 35px);
+		margin-top: -35px;
+		margin-left: -35px;
+		position: relative;
+		overflow: hidden;
+
+		@include max(lg) {
+			width: 100%;
+			height: auto;
+			margin-top: 0;
+			margin-left: 0;
+			order: 1;
+			flex-grow: 1;
+		}
+	}
+
 	&__image {
 		width: 382px;
 		height: 382px;
 		border-radius: 50%;
 		overflow: hidden;
 		position: absolute;
-		top: -120px;
+		//top: -120px;
+		bottom: 0;
 		right: 0;
 
 		@include max(lg) {

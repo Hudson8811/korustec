@@ -1,17 +1,19 @@
 $(document).ready(function() {
-	const selects = $('.pdf__select');
+	const selects = $('.pdf__select-wrapper');
+	const closeBtn = $('.pdf__close');
 
-	selects.each(function () {
-		$(this).select2({
-			closeOnSelect: false,
-			dropdownCssClass: 'dropdown-pdf'
-			//dropdownParent: $('.pdf__select-wrapper')
-		}).on('select2:open', function () {
-			$(this).parent().siblings('.pdf__quantity').hide();
-			$(this).parent().siblings('.pdf__close').css('display', 'flex');
-		}).on('select2:close', function () {
-			$(this).parent().siblings('.pdf__close').hide();
-			$(this).parent().siblings('.pdf__quantity').css('display', 'flex');
-		});
+	selects.on('click', function () {
+		$(this).addClass('open');
+		$(this).siblings('.pdf__quantity').hide();
+		$(this).siblings('.pdf__close').css('display', 'flex');
+	});
+
+	closeBtn.on('click', function () {
+		$(this).siblings('.pdf__select-wrapper').removeClass('open');
+		$(this).siblings('.pdf__quantity').css('display', 'flex');
+		$(this).hide();
+		$(this).siblings('.pdf__select-wrapper').find('.pdf__select-scroll').animate({
+			scrollTop: 0
+		}, 0);
 	});
 })

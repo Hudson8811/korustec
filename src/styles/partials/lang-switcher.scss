@@ -1,81 +1,76 @@
 .lang-switcher {
+	width: 90px;
+	height: 38px;
+	border-radius: 18px !important;
+	background-color: $blue-0a;
+	border: none;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	&.open {
+		overflow: visible;
+
+		.lang-switcher__scroll a {
+			pointer-events: auto;
+		}
+	}
+
+	@include hover {
+		background-color: $blue-18;
+	}
+
 	@include max(lg) {
 		display: none;
 	}
 
-	select {
-		width: 90px;
+	&__list {
+		border-radius: 18px;
+		overflow: hidden;
 	}
 
-	.select2-container--default {
-		&.select2-container--open .select2-selection--single {
-			border-color: $black;
+	&__scroll {
+		display: flex;
+		flex-direction: column;
+		border-radius: 18px;
+		max-height: 180px;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			border-radius: 25px;
 		}
 
-		.select2-selection--single {
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $grey-ca;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			height: 38px;
-			border-radius: 18px !important;
+			padding: 5px 10px;
+			font-family: $secondFont;
+			font-size: 16px;
+			color: $grey-f5;
+			text-transform: uppercase;
 			background-color: $blue-0a;
-			border: none;
-			transition: 0.3s ease;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			pointer-events: none;
 
 			&:hover {
-				background-color: $blue-18;
-			}
-
-			.select2-selection {
-				&__rendered {
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					height: 100%;
-					padding: 0 10px;
-					font-family: $secondFont;
-					font-size: 16px;
-					color: $grey-f5;
-					text-transform: uppercase;
-				}
-
-				&__arrow {
-					display: none;
-				}
+				text-decoration: underline;
+				text-decoration-color: rgba(245, 245, 245, 0.6);
+				text-decoration-thickness: 3px;
+				text-underline-offset: 4px;
 			}
 		}
-
-		.select2-results__option {
-			&--highlighted.select2-results__option--selectable {
-				background-color: $blue-0a;
-				color: $white;
-				text-decoration: none;
-
-				@include hover {
-					text-decoration: underline;
-					text-decoration-color: rgba(245, 245, 245, 0.6);
-					text-decoration-thickness: 3px;
-					text-underline-offset: 4px;
-				}
-			}
-		}
-	}
-
-	.select2-dropdown {
-		border: none;
-		border-radius: 18px !important;
-		overflow: hidden;
-	}
-
-	.select2-results__option {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-family: $secondFont;
-		font-size: 16px;
-		color: $grey-f5;
-		text-transform: uppercase;
-		padding: 5px 10px;
-		background-color: $blue-0a;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
 	}
 }
