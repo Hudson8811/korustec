@@ -69,13 +69,17 @@ $(document).ready(function() {
 	});
 
 	/* Partners marquee */
-	$('.js-marquee-partners').marquee({
-		duration: 50000,
-		delayBeforeStart: 0,
-		duplicated: true,
-		gap: 0,
-		startVisible: true,
-		direction: 'left'
+	const marqueePartners = new Swiper('.js-marquee-partners', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		loop: true,
+		freeMode: true,
+		autoplay: {
+			delay: 1,
+			disableOnInteraction: false,
+			//pauseOnMouseEnter: true
+		},
+		speed: 6000
 	});
 
 	/* Content toggle button */

@@ -61,6 +61,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		position: relative;
 
 		@include max(lg) {
 			align-items: flex-start;
@@ -82,12 +83,24 @@
 
 	&__logo {
 		display: inline-flex;
+
+		@include max(md) {
+			display: flex;
+			align-items: center;
+			width: 145px;
+			height: 37px;
+			position: absolute;
+			top: 50%;
+			left: 13px;
+			transform: translateY(-50%);
+		}
 	}
 
 	&__menu {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
+		position: relative;
 
 		@include max(lg) {
 			display: none;
@@ -95,7 +108,6 @@
 
 		& > li {
 			height: 100%;
-			position: relative;
 
 			@include hover {
 				ul {
@@ -104,19 +116,26 @@
 				}
 			}
 
-			&:first-child a {
-				border-top-left-radius: 18px;
-				border-bottom-left-radius: 18px;
-				padding-left: 50px;
+			&:first-child {
+				a,
+				span {
+					border-top-left-radius: 18px;
+					border-bottom-left-radius: 18px;
+					padding-left: 50px;
+				}
 			}
 
-			&:last-child a {
-				border-top-right-radius: 18px;
-				border-bottom-right-radius: 18px;
-				padding-right: 50px;
+			&:last-child {
+				a,
+				span {
+					border-top-right-radius: 18px;
+					border-bottom-right-radius: 18px;
+					padding-right: 50px;
+				}
 			}
 
-			a {
+			a,
+			span {
 				display: inline-block;
 				font-family: $secondFont;
 				font-size: 16px;
@@ -125,8 +144,9 @@
 				text-decoration: none;
 				background-color: $blue-0a;
 				padding: 9.5px 20px;
-				position: relative;
+			}
 
+			a {
 				@include hover {
 					text-decoration: underline;
 					text-decoration-color: rgba(245, 245, 245, 0.6);
@@ -136,7 +156,6 @@
 			}
 
 			ul {
-				width: 100%;
 				opacity: 0;
 				pointer-events: none;
 				position: absolute;
@@ -232,6 +251,7 @@
 			background-repeat: no-repeat;
 			background-position: calc(100% - 12px) center;
 			color: $white;
+			position: relative;
 			transition: 0.3s ease;
 
 			@include max(md) {
@@ -254,8 +274,7 @@
 				background-color: $blue-18;
 
 				@include max(md) {
-					width: 75px;
-					background-image: none;
+					width: calc(100vw - 79px);
 				}
 			}
 

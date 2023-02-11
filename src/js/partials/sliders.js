@@ -1,13 +1,16 @@
 $(document).ready(function() {
 	let newsSlider = undefined;
+	const newsSliderEl = $('.js-slider-news');
 	const breakpoint = window.matchMedia( '(min-width: 1280px)' );
 
 	const initSliders = () => {
-		if (breakpoint.matches === true) {
-			return enableSliders();
-		} else if (breakpoint.matches === false) {
-			destroySliders(newsSlider);
-			return;
+		if (newsSliderEl.length > 0) {
+			if (breakpoint.matches === true) {
+				return enableSliders();
+			} else if (breakpoint.matches === false) {
+				destroySliders(newsSlider);
+				return;
+			}
 		}
 	}
 
@@ -147,11 +150,6 @@ $(document).ready(function() {
 		spaceBetween: 0,
 		freeMode: true,
 		loop: true,
-		autoplay: {
-			delay: 1,
-			disableOnInteraction: false
-		},
-		speed: 14000,
 		breakpoints: {
 			640: {
 				slidesPerView: 1.5

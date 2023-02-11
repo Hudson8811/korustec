@@ -44,8 +44,7 @@
 		cursor: pointer;
 
 		@include hover {
-			background-color: transparent;
-			color: $black-23;
+			background-color: $blue-29;
 		}
 
 		@include max(md) {
@@ -71,7 +70,7 @@
 			padding: 9px 37px;
 
 			@include hover {
-				background-color: $blue-0a;
+				background-color: $blue-29;
 				color: $grey-f5;
 			}
 		}

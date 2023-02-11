@@ -8,14 +8,10 @@
 	}
 
 	&__events {
-		padding: 64px 0 127px;
+		padding: 64px 0 0;
 
 		@include max(md) {
-			padding: 50px 0;
-		}
-
-		.events__slider {
-			margin-top: 33px;
+			padding: 50px 0 0;
 		}
 	}
 
@@ -41,6 +37,20 @@
 				background-color: $blue-0a;
 				margin-right: 22px;
 			}
+		}
+	}
+
+	&__slider-overflow {
+		width: 100%;
+		overflow: hidden;
+		padding-bottom: 127px;
+
+		@include max(md) {
+			padding-bottom: 50px;
+		}
+
+		.events__slider {
+			margin-top: 33px;
 		}
 	}
 
@@ -81,10 +91,6 @@
 		svg {
 			transform: rotate(180deg);
 		}
-	}
-
-	&__container {
-		overflow: hidden;
 	}
 
 	&__container-full {

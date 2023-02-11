@@ -9,7 +9,7 @@ block vars
 
 block main
 	.events-page
-		.container.events-page__container
+		.container
 			h1 Events
 			.events-page__events.events
 				.events-page__subtitle
@@ -19,37 +19,46 @@ block main
 							+icon('chevron-right')(width='14', height='24')
 						.events-page__slider-next
 							+icon('chevron-right')(width='14', height='24')
+		.events-page__slider-overflow
+			.container
 				.events__slider.js-slider-events-2
 					.swiper-wrapper
 						.card-events.swiper-slide
+							a.link-inset(href='events-single.html', target='_blank')
 							.card-events__top
 								.card-events__date 20 / 09
 								.card-events__time 13:00 - 16:00
-							.card-events__content(style='background-image: url("images/events/1.jpg")')
+							.card-events__content
+								img(src='images/events/1.jpg', alt='')
 								h4 Think Tank Needs to Build a National Research System
 								.card-events__status.status.status--online Online
 						.card-events.swiper-slide
+							a.link-inset(href='events-single.html', target='_blank')
 							.card-events__top
 								.card-events__date 20 / 09
 								.card-events__time 13:00 - 16:00
-							.card-events__content(style='background-image: url("images/events/2.jpg")')
+							.card-events__content
+								img(src='images/events/2.jpg', alt='')
 								h4 Think Tank Needs to Build a National Research System
 								.card-events__status.status.status--offline Online
 						.card-events.swiper-slide
 							.card-events__top
 								.card-events__date -- / --
 								.card-events__time --:-- - --:--
-							.card-events__content(style='background-image: url("images/events/ph.jpg")')
+							.card-events__content
+								img(src='images/events/ph.jpg', alt='')
 						.card-events.swiper-slide
 							.card-events__top
 								.card-events__date -- / --
 								.card-events__time --:-- - --:--
-							.card-events__content(style='background-image: url("images/events/ph.jpg")')
+							.card-events__content
+								img(src='images/events/ph.jpg', alt='')
 						.card-events.swiper-slide
 							.card-events__top
 								.card-events__date -- / --
 								.card-events__time --:-- - --:--
-							.card-events__content(style='background-image: url("images/events/ph.jpg")')
+							.card-events__content
+								img(src='images/events/ph.jpg', alt='')
 		.container
 			.events-page__subtitle
 				span Past:
@@ -64,7 +73,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/2.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
@@ -74,7 +84,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/1.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
@@ -84,7 +95,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/3.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
@@ -98,7 +110,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/4.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
@@ -108,7 +121,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/2.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
@@ -118,7 +132,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/1.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
@@ -128,7 +143,8 @@ block main
 								.card-events-single__image
 									img(src='images/events/3.jpg', alt='')
 							.card-events-single__content
-								h4 Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
 								.card-events-single__captions
 									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
 									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
