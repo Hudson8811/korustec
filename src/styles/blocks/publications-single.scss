@@ -204,5 +204,19 @@
 	&__attachments {
 		position: sticky;
 		top: 100px;
+		display: block;
+
+		@include max(lg) {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+			margin-top: 30px;
+
+			@include max(lg) {
+				display: block;
+			}
+		}
 	}
 }

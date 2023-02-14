@@ -49,10 +49,6 @@ $(document).ready(function() {
 		dropdownParent: $('.key-words')
 	});
 
-	$('.search-page__select select').select2({
-		dropdownParent: $('.search-page__select')
-	});
-
 	/* Add clear button on opening dropdown */
 	$('.key-words select').on('select2:open', function () {
 		setTimeout(() => {

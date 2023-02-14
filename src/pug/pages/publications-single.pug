@@ -29,6 +29,41 @@ block main
 								.views__icon
 									+icon('views')(width='30', height='30')
 								.views__digit 122
+					.publications-single__attachments.publications-single__attachments--mobile.attachments
+						.attachments__top
+							.attachments__title Attachments
+							.attachments__downloads-num 25 downloads
+						ul.attachments__list
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span 20220826-daily-digest.pdf
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span file_name.pdf
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span another_file_name.pdf
+							li
+								ul(style='display: none')
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span 20220826-daily-digest.pdf
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span file_name.pdf
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span another_file_name.pdf
+						.attachments__more.js-attachments-toggle
+							.attachments__more-icon
+								+icon('chevron-down')(width='14', height='8')
+							span Show more
 					.publications-single__block
 						h3.publications-single__subtitle Header h3
 						.publications-single__text

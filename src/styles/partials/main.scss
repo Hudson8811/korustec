@@ -397,6 +397,18 @@ h4 {
 		}
 	}
 
+	select.ui-datepicker-month,
+	select.ui-datepicker-year {
+		height: 22px;
+		border-color: $grey-ca;
+		background-color: transparent;
+		font-family: $secondFont;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.02em;
+		color: $black;
+	}
+
 	.ui-datepicker-title {
 		line-height: 1.8em;
 	}
@@ -467,6 +479,7 @@ h4 {
 
 .ui-widget.ui-widget-content {
 	border-radius: 5px;
+	transform: translateX(-10px);
 
 	.ui-state-hover {
 		border: none;
