@@ -6,6 +6,11 @@ $(document).ready(function() {
 	var headerHeight = header.outerHeight();
 	var scroll = $(window).scrollTop();
 	var isScroll = false;
+	var toggledMenu = $('.header-menu nav li span');
+
+	toggledMenu.click(function () {
+		$(this).next().slideToggle(300);
+	});
 
 	burger.click(function () {
 		if (!header.hasClass('open')) {

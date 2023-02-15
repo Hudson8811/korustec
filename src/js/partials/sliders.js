@@ -42,32 +42,22 @@ $(document).ready(function() {
 	});
 
 	const eventsSlider = new Swiper('.js-slider-events', {
-		slidesPerView: 1.27,
-		spaceBetween: 10,
-		breakpoints: {
-			640: {
-				slidesPerView: 2.5
-			},
-			1280: {
-				slidesPerView: 4.22,
-				spaceBetween: 35
-			}
-		}
+		slidesPerView: 'auto',
+		spaceBetween: 35
 	});
 
 	const eventsSlider2 = new Swiper('.js-slider-events-2', {
-		slidesPerView: 1.27,
+		slidesPerView: 'auto',
 		spaceBetween: 10,
-		navigation: {
-			nextEl: '.events-page__slider-next',
-			prevEl: '.events-page__slider-prev',
-		},
+		navigation: false,
 		breakpoints: {
 			640: {
-				slidesPerView: 2.5
+				navigation: {
+					nextEl: '.events-page__slider-next',
+					prevEl: '.events-page__slider-prev',
+				}
 			},
 			1280: {
-				slidesPerView: 4.22,
 				spaceBetween: 35
 			}
 		}

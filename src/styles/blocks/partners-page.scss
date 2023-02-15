@@ -62,17 +62,12 @@
 			width: 50%;
 		}
 
-		@include max(499) {
-			width: 100%;
-			padding: 15px 5px;
-		}
-
 		&:nth-child(-n+4) {
 			border-top: none;
 		}
 
 		img {
-			width: 100%;
+			max-width: 100%;
 			object-fit: cover;
 		}
 	}

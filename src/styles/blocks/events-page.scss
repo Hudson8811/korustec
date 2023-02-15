@@ -11,7 +11,7 @@
 		padding: 64px 0 0;
 
 		@include max(md) {
-			padding: 50px 0 0;
+			padding: 29px 0 0;
 		}
 	}
 
@@ -29,6 +29,11 @@
 			font-weight: 700;
 			color: $black;
 
+			@include max(md) {
+				font-size: 20px;
+				line-height: 24px;
+			}
+
 			&::before {
 				content: '';
 				display: block;
@@ -36,6 +41,12 @@
 				height: 3px;
 				background-color: $blue-0a;
 				margin-right: 22px;
+
+				@include max(md) {
+					width: 25px;
+					height: 2px;
+					margin-right: 8px;
+				}
 			}
 		}
 	}
@@ -46,11 +57,15 @@
 		padding-bottom: 127px;
 
 		@include max(md) {
-			padding-bottom: 50px;
+			padding-bottom: 60px;
 		}
 
 		.events__slider {
 			margin-top: 33px;
+
+			@include max(md) {
+				margin-top: 18px;
+			}
 		}
 	}
 
@@ -58,6 +73,10 @@
 		display: flex;
 		align-items: center;
 		gap: 40px;
+
+		@include max(md) {
+			display: none;
+		}
 	}
 
 	&__slider-prev,
@@ -96,6 +115,10 @@
 	&__container-full {
 		max-width: 1600px;
 		margin-top: 42px;
+
+		@include max(md) {
+			margin-top: 17px;
+		}
 	}
 
 	&__block {
@@ -210,6 +233,7 @@
 
 		@include max(md) {
 			width: 100%;
+			margin-top: 32px;
 		}
 
 		&::after {
@@ -225,6 +249,29 @@
 
 			@include max(md) {
 				display: none;
+			}
+		}
+	}
+
+	&__mobile-caption {
+		& + #{$parent}__mobile-caption {
+			margin-top: 9px;
+		}
+
+		.caption__type {
+			min-width: auto;
+			max-width: 100%;
+			width: 100%;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: 700;
+			letter-spacing: 0.01em;
+			color: $black-23;
+
+			span {
+				display: block;
+				font-weight: 400;
+				margin-top: 4px;
 			}
 		}
 	}

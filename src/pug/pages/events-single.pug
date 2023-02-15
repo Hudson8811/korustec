@@ -24,10 +24,14 @@ block main
 					a.filter-tags__item(href='#', target='_blank') #NEW MATERIAL
 					a.filter-tags__item(href='#', target='_blank') #COSMOS
 					a.filter-tags__item(href='#', target='_blank') #ANOTHER TAG
-					.publications-single__views.views
+					.events-single__views.views.d-none-flex-mobile
 						.views__icon
 							+icon('views')(width='30', height='30')
 						.views__digit 122
+				.events-single__views.views.d-none-flex-desktop
+					.views__icon
+						+icon('views')(width='30', height='30')
+					.views__digit 122
 			.events-single__table.events-single__table--small.table
 				h3 Program
 				table

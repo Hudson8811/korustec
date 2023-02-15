@@ -41,13 +41,32 @@ $(document).ready(function() {
 		e.preventDefault();
 		e.stopPropagation();
 		langSwitcherLinks.removeAttr('style');
-		$(this).css('order', '-1');
+
+		if (!$(this).closest('.lang-switcher').hasClass('lang-switcher--reverse')) {
+			$(this).css('order', '-1');
+		} else {
+			$(this).css('order', '1');
+		}
 		$(this).closest('.lang-switcher').removeClass('open');
 	});
 
 	$('.key-words select').select2({
 		dropdownParent: $('.key-words')
 	});
+
+	if (window.matchMedia('(max-width: 639px)').matches) {
+		$('.events-single .events-single__caption .caption__type').on('click', function () {
+			const content = $(this).next();
+
+			if (!$(this).hasClass('open')) {
+				content.slideDown(300);
+				$(this).addClass('open');
+			} else {
+				content.slideUp(300);
+				$(this).removeClass('open');
+			}
+		});
+	}
 
 	/* Add clear button on opening dropdown */
 	$('.key-words select').on('select2:open', function () {

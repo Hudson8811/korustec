@@ -1,6 +1,10 @@
 .table {
 	overflow-x: auto;
 
+	@include max(md) {
+		width: calc(100% + 10px);
+	}
+
 	table {
 		width: 100%;
 		border-collapse: collapse;
@@ -9,6 +13,10 @@
 		overflow: hidden;
 		position: relative;
 		margin-top: 30px;
+
+		@include max(md) {
+			margin-top: 17px;
+		}
 
 		&::before {
 			content: '';
@@ -30,6 +38,10 @@
 			font-size: 16px;
 			line-height: 21px;
 			letter-spacing: 0.01em;
+
+			@include max(md) {
+				padding: 8px 14px;
+			}
 		}
 
 		th {
@@ -37,6 +49,10 @@
 			font-weight: 400;
 			text-align: left;
 			color: $grey-f0;
+
+			@include max(md) {
+				font-size: 14px;
+			}
 		}
 
 		td {
@@ -44,6 +60,10 @@
 			transition: 0.3s ease;
 			user-select: none;
 			position: relative;
+
+			@include max(md) {
+				font-size: 12px;
+			}
 
 			&:hover {
 				background-color: #908bff;
@@ -70,6 +90,12 @@
 					left: 0;
 					z-index: -1;
 				}
+			}
+		}
+
+		ul.list {
+			li + li {
+				margin-top: 6px;
 			}
 		}
 	}

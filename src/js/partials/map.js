@@ -211,32 +211,26 @@ window.addEventListener('load', () => {
 		return;
 	}
 
-	function initMap(el, lat, lng, zoom) {
+	var myLatlng = new google.maps.LatLng(55.654847, 37.555031);
+	var myLatlngMarker = new google.maps.LatLng(55.654314, 37.556179);
 
-		const options = {
-			center: { lat, lng },
-			zoom,
-			//disableDefaultUI: true,
-			styles: mapStyles
-		};
-
-		homepageMapObject = new google.maps.Map(el, options);
-
-		/*const marker = new google.maps.Marker({
-			position: { lat, lng },
-			map: homepageMapObject,
-			icon: {
-				url: './images/map_icon_v2.png',
-				scaledSize:{
-					height: 92,
-					width: 74
-				},
-				anchor: new google.maps.Point(37, 63),
-			},
-		});*/
+	var myOptions = {
+		zoom: 17,
+		center: myLatlng,
+		styles: mapStyles
 	}
 
-	if (mapMain) {
-		initMap(mapMain, 65.061313, 101.477485, 3);
-	}
+	var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+	var marker = new google.maps.Marker({
+		position: myLatlngMarker,
+		map: map,
+		icon: {
+			url: './images/marker.png',
+			scaledSize: {
+				height: 54,
+				width: 50
+			}
+		}
+	});
 });

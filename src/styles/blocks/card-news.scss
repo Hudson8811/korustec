@@ -59,6 +59,7 @@
 
 	&__pdf {
 		margin-top: 37px;
+		z-index: 9;
 
 		@include max(md) {
 			margin-top: 50px;

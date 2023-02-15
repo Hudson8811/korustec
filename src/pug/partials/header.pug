@@ -7,20 +7,27 @@ header.header
 				+icon('logo-2')(width='145', height='37')
 			nav.header__menu
 				li
-					a(href='publications.html', target='_blank') Publications
+					a.link-hover-line(href='publications.html', target='_blank')
+						span Publications
 				li
-					a(href='news.html', target='_blank') News
+					a.link-hover-line(href='news.html', target='_blank')
+						span News
 				li
-					a(href='events.html', target='_blank') Events
+					a.link-hover-line(href='events.html', target='_blank')
+						span Events
 				li
-					span Who we are
+					span.link-hover-line
+						span Who we are
 					ul
 						li
-							a(href='about.html', target='_blank') About us
+							a.link-hover-line(href='about.html', target='_blank')
+								span About us
 						li
-							a(href='director.html', target='_blank') From the Director
+							a.link-hover-line(href='director.html', target='_blank')
+								span From the Director
 				li
-					a(href='partners.html', target='_blank') Partners
+					a.link-hover-line(href='partners.html', target='_blank')
+						span Partners
 		.header__col
 			include search.pug
 			include lang-switcher.pug
@@ -30,9 +37,9 @@ header.header
 					.header-m__burger
 						span
 	.header-menu
-		a.header__logo(href='/')
-			+icon('logo-2')(width='145', height='37')
-		nav.header__menu
+		.header-menu__close
+			+icon('close-2')(width='20', height='20')
+		nav
 			li
 				a(href='publications.html', target='_blank') Publications
 			li
@@ -40,8 +47,19 @@ header.header
 			li
 				a(href='events.html', target='_blank') Events
 			li
-				a(href='about.html', target='_blank') Who we are
+				span Who we are
+				ul
+					li
+						a(href='about.html', target='_blank') About us
+					li
+						a(href='director.html', target='_blank') From the Director
 			li
 				a(href='partners.html', target='_blank') Partners
-		.header-menu__close
-			+icon('close')(width='7', height='7')
+		.header-menu__bottom
+			.lang-switcher.lang-switcher--reverse
+				.lang-switcher__list
+					.lang-switcher__scroll
+						a(href='#') ENG
+						a(href='#') KOR
+						a(href='#') RUS
+			include search.pug

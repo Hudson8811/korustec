@@ -138,6 +138,30 @@ input:focus-visible {
 	z-index: 2;
 }
 
+.link-hover-line {
+	display: inline;
+
+	span {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			right: 0;
+			width: 0;
+			height: 3px;
+			background-color: rgba(245, 245, 245, 0.6);
+			transition: width 0.3s ease;
+		}
+	}
+
+	&:hover span::after {
+		width: 100%;
+	}
+}
+
 
 /**
  *  Typography
@@ -479,7 +503,10 @@ h4 {
 
 .ui-widget.ui-widget-content {
 	border-radius: 5px;
-	transform: translateX(-10px);
+
+	@include max(md) {
+		transform: translateX(-10px);
+	}
 
 	.ui-state-hover {
 		border: none;
@@ -516,24 +543,7 @@ h4 {
 	&__carousel {
 		max-width: 1300px;
 		width: 100% !important;
-		max-height: 150px;
 		margin: 0 auto;
-
-		@media (min-width: 400px) {
-			max-height: 200px;
-		}
-
-		@media (min-width: 500px) {
-			max-height: 300px;
-		}
-
-		@media (min-width: 600px) {
-			max-height: 400px;
-		}
-
-		@media (min-width: 768px) {
-			max-height: 400px;
-		}
 
 		@media (min-width: 900px) {
 			max-height: 550px;
@@ -548,10 +558,15 @@ h4 {
 	}
 
 	&__thumbs {
+		display: none;
 		max-width: 1170px;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 40px;
+
+		@media (min-width: 900px) {
+			display: block;
+		}
 
 		.carousel__slide {
 			padding: 14px 3.5px;
@@ -585,8 +600,12 @@ h4 {
 	}
 
 	&__slide {
-		justify-content: flex-end;
+		justify-content: center;
 		padding: 0 40px;
+
+		@media (min-width: 900px) {
+			justify-content: flex-end;
+		}
 
 		@media (min-width: 1024px) {
 			padding: 0 40px;
@@ -634,7 +653,13 @@ h4 {
 
 .fancybox__nav .carousel__button.is-next,
 .fancybox__nav .carousel__button.is-prev {
-	top: calc(50% + 108px / 2);
+	top: 50%;
+	transform: translateY(-50%);
+
+	@media (min-width: 900px) {
+		top: calc(50% + 108px / 2);
+		transform: none;
+	}
 }
 
 .fancybox__nav .carousel__button.is-next {

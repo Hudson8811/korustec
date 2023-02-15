@@ -3,6 +3,7 @@
 
 	display: flex;
 	flex-direction: column;
+	width: 286px;
 	min-height: 467px;
 	border-radius: 20px;
 	overflow: hidden;
@@ -11,6 +12,10 @@
 
 	@include max(lg) {
 		min-height: 385px;
+	}
+
+	@include max(360) {
+		width: 250px;
 	}
 
 	@include hover {
