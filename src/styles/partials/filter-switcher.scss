@@ -28,5 +28,10 @@
 		@include hover {
 			background-color: $blue-29;
 		}
+
+		&.active {
+			background-color: $white;
+			color: $black-23;
+		}
 	}
 }

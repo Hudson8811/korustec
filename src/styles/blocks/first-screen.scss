@@ -9,6 +9,14 @@
 	position: relative;
 
 	@include max(md) {
+		min-height: calc(100vh + 100px);
+		margin-top: -116px;
+		padding-top: 116px;
+		padding-bottom: 234px;
+	}
+
+	@media (max-width: 989px) and (orientation: landscape) {
+		min-height: calc(100vh + 100px);
 		margin-top: -116px;
 		padding-top: 116px;
 		padding-bottom: 234px;
@@ -21,10 +29,14 @@
 		bottom: 0;
 		left: 0;
 		overflow: hidden;
-		pointer-events: none;
+		//pointer-events: none;
 
 		@include max(md) {
 			height: 400px;
+		}
+
+		@media (max-width: 989px) and (orientation: landscape) {
+			height: 280px;
 		}
 
 		canvas {

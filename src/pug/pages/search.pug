@@ -14,8 +14,8 @@ block main
 				.search-page__top-col
 					input.search-page__field-search(type='search', name='search')
 					.search-page__date
-						input.search-page__field-date(type='text', name='date_from', class='datepicker', placeholder='From:')
-						input.search-page__field-date(type='text', name='date_to', class='datepicker', placeholder='To:')
+						input.search-page__field-date(type='text', name='date_from', class='datepicker-from', placeholder='From:')
+						input.search-page__field-date(type='text', name='date_to', class='datepicker-to', placeholder='To:')
 				.search-page__top-col
 					label.search-page__field-sort
 						input(type='checkbox', name='date_sort')
@@ -50,7 +50,8 @@ block main
 				.search-page__col
 					h3 Search
 					.search-page__news
-						.search-page__news-item.card-news.card-news--white
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
 							.card-news__date 27.03.2022
 							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
 							.card-news__text The Ministry of Science and ICT and National Research Foundation of
@@ -69,7 +70,8 @@ block main
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
-						.search-page__news-item.card-news.card-news--white
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
 							.card-news__date 27.03.2022
 							h4.card-news__title Call for 2021 Korea-Russia
 							.card-news__text The Ministry of Science and ICT and National Research Foundation of
@@ -88,7 +90,8 @@ block main
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
-						.search-page__news-item.card-news.card-news--white
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
 							.card-news__date 27.03.2022
 							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
 							.card-news__text The Ministry of Science and ICT and National Research Foundation of
@@ -107,7 +110,8 @@ block main
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
-						.search-page__news-item.card-news.card-news--white
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
 							.card-news__date 27.03.2022
 							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
 							.card-news__text The Ministry of Science and ICT and National Research Foundation of
@@ -126,7 +130,8 @@ block main
 								.pdf__close
 									+icon('close')(width='7', height='7')
 							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
-						.search-page__news-item.card-news.card-news--white
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
 							.card-news__date 27.03.2022
 							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
 							.card-news__text The Ministry of Science and ICT and National Research Foundation of

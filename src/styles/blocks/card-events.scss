@@ -10,10 +10,6 @@
 	color: $grey-f5;
 	position: relative;
 
-	@include max(lg) {
-		min-height: 385px;
-	}
-
 	@include max(360) {
 		width: 250px;
 	}
@@ -102,13 +98,10 @@
 		}
 
 		h4 {
+			font-size: 27px;
+			line-height: 33px;
 			position: relative;
 			z-index: 1;
-
-			@include max(lg) {
-				font-size: 20px;
-				line-height: 24px;
-			}
 		}
 	}
 

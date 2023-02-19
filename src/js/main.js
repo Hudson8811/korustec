@@ -1,7 +1,6 @@
 //= ./../../node_modules/jquery/dist/jquery.min.js
 
 //= ./libs/swiper-bundle.min.js
-//= ./libs/aos.js
 //= ./libs/select2.min.js
 //= ./libs/es-module-shims.js
 //= ./libs/three.min.js

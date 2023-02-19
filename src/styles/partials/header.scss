@@ -184,11 +184,11 @@
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 25px;
+		width: 100%;
+		height: 100vh;
 		position: fixed;
 		top: 0;
 		left: 0;
-		right: 0;
-		bottom: 0;
 		padding: 92px 20px 27px;
 		background-color: $white;
 		transform: translateX(100%);
@@ -260,11 +260,26 @@
 		.search {
 			z-index: 1;
 
-			input:focus {
-				width: 239px;
+			input {
+				width: 160px;
 
-				@include max(md) {
+				@include max(lg) {
 					width: calc(100vw - 38px);
+				}
+
+				&:placeholder-shown {
+					@include max(lg) {
+						width: 160px;
+						background-color: $blue-0a;
+					}
+				}
+
+				&:focus {
+					width: 239px;
+
+					@include max(lg) {
+						width: calc(100vw - 38px);
+					}
 				}
 			}
 		}
@@ -313,7 +328,12 @@
 			position: relative;
 			transition: 0.3s ease;
 
+			@include max(lg) {
+				width: 239px;
+			}
+
 			@include max(md) {
+				width: calc(100vw - 79px);
 				padding: 0 10px;
 			}
 
@@ -328,6 +348,13 @@
 				background-color: $blue-18;
 			}
 
+			&:placeholder-shown {
+				@include max(lg) {
+					width: 54px;
+					background-color: $blue-0a;
+				}
+			}
+
 			&:focus {
 				width: 239px;
 				background-color: $blue-18;
@@ -335,10 +362,6 @@
 				@include max(md) {
 					width: calc(100vw - 79px);
 				}
-			}
-
-			&:-webkit-autofill {
-				background-color: red;
 			}
 		}
 

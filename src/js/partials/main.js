@@ -1,12 +1,15 @@
 $(document).ready(function() {
-	AOS.init();
-
-	$('.datepicker').datepicker({
+	$('.datepicker-from').datepicker({
 		changeMonth: true,
 		changeYear: true,
 		dateFormat: 'dd.mm.yy',
 		yearRange: '2000:2040',
-		monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+		monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+		beforeShow: function(input, inst) {
+			inst.dpDiv.css({
+				transform: 'translateX(0)'
+			});
+		}
 	}).inputmask({
 		alias: 'datetime',
 		inputFormat: 'dd.mm.yyyy',
@@ -22,7 +25,33 @@ $(document).ready(function() {
 		}
 	});
 
-	$(document).mouseup(function(e) {
+	$('.datepicker-to').datepicker({
+		changeMonth: true,
+		changeYear: true,
+		dateFormat: 'dd.mm.yy',
+		yearRange: '2000:2040',
+		monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+		beforeShow: function(input, inst) {
+			inst.dpDiv.css({
+				transform: 'translateX(-10px)'
+			});
+		}
+	}).inputmask({
+		alias: 'datetime',
+		inputFormat: 'dd.mm.yyyy',
+		prefillYear: false,
+		placeholder: '_',
+		min: '01.01.2000',
+		max: '12.31.2040',
+		oncomplete: function() {
+			var arr = $(this).val().split('/'),
+				date = new Date(arr[2] + '-' + arr[1] + '-' + arr[0] + ' ' + '00:00:00');
+
+			$(this).datepicker( "setDate",  date);
+		}
+	});
+
+	$(document).on('mouseup', function(e) {
 		const langSwitcher = $('.lang-switcher');
 
 		if (!langSwitcher.is(e.target) && langSwitcher.has(e.target).length === 0) {
@@ -123,5 +152,10 @@ $(document).ready(function() {
 			$(this).removeClass('open');
 			$(this).find('span').text('Show more');
 		}
+	});
+
+	/* Partners switcher */
+	$('.filter-switcher__btn').click(function () {
+		$(this).toggleClass('active');
 	});
 })

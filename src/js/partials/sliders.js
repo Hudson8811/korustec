@@ -18,7 +18,8 @@ $(document).ready(function() {
 		if (newsSlider == undefined || newsSlider.el == undefined) {
 			newsSlider = new Swiper('.js-slider-news', {
 				slidesPerView: 3.35,
-				spaceBetween: 35
+				spaceBetween: 35,
+				touchStartPreventDefault: false
 			});
 		}
 	}
@@ -139,7 +140,6 @@ $(document).ready(function() {
 		slidesPerView: 1.27,
 		spaceBetween: 0,
 		freeMode: true,
-		loop: true,
 		breakpoints: {
 			640: {
 				slidesPerView: 1.5

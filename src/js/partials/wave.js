@@ -78,7 +78,7 @@ function init() {
 	container.appendChild( renderer.domElement );
 
 	container.style.touchAction = 'none';
-	//container.addEventListener( 'pointermove', onPointerMove );
+	container.addEventListener( 'pointermove', onPointerMove );
 
 	//
 
@@ -100,14 +100,14 @@ function onWindowResize() {
 
 //
 
-/*function onPointerMove( event ) {
+function onPointerMove( event ) {
 
 	if ( event.isPrimary === false ) return;
 
 	mouseX = event.clientX - windowHalfX;
-	mouseY = event.clientY - windowHalfY;
+	//mouseY = event.clientY - windowHalfY;
 
-}*/
+}
 
 //
 
