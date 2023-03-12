@@ -213,6 +213,8 @@
 		&--mobile {
 			display: none;
 			margin-top: 30px;
+			position: relative;
+			top: unset;
 
 			@include max(lg) {
 				display: block;
