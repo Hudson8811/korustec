@@ -185,8 +185,8 @@
 		justify-content: space-between;
 		gap: 25px;
 		width: 100%;
-		min-height: 100vh;
-		min-height: -webkit-fill-available;
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 		position: fixed;
 		top: 0;
 		left: 0;

@@ -96,17 +96,17 @@ function onWindowResize() {
 
 	renderer.setSize( window.innerWidth, window.innerHeight );
 
+	container.addEventListener( 'pointermove', onPointerMove );
+
 }
 
 //
 
 function onPointerMove( event ) {
-
-	if ( event.isPrimary === false ) return;
-
-	mouseX = event.clientX - windowHalfX;
-	//mouseY = event.clientY - windowHalfY;
-
+	if (window.matchMedia("(min-width: 1280px)").matches) {
+		if ( event.isPrimary === false ) return;
+		mouseX = event.clientX - windowHalfX;
+	}
 }
 
 //
