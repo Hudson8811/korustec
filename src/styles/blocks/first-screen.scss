@@ -29,7 +29,10 @@
 		bottom: 0;
 		left: 0;
 		overflow: hidden;
-		//pointer-events: none;
+
+		@include max(lg) {
+			pointer-events: none;
+		}
 
 		@include max(md) {
 			height: 400px;
