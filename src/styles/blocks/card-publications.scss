@@ -11,6 +11,7 @@
 	padding: 35px;
 	background-color: $white;
 	position: relative;
+	overflow: hidden;
 
 	@include max(lg) {
 		padding: 10px;
@@ -88,7 +89,7 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		clip-path: content-box;
+		-webkit-mask-image: -webkit-radial-gradient(white, black);
 
 		@include max(lg) {
 			width: 100%;
