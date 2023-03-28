@@ -107,6 +107,7 @@
 		}
 
 		& > li {
+			display: block;
 			height: 100%;
 
 			@include hover {
@@ -136,7 +137,7 @@
 
 			& > a,
 			& > span {
-				display: inline-block;
+				display: block;
 				font-family: $secondFont;
 				font-size: 16px;
 				line-height: 20px;
@@ -144,13 +145,16 @@
 				text-decoration: none;
 				background-color: $blue-0a;
 				padding: 9.5px 20px;
+				position: relative;
 			}
 
 			ul {
+				min-width: 175px;
 				opacity: 0;
 				pointer-events: none;
 				position: absolute;
 				top: 100%;
+				left: 0;
 				transition: 0.3s ease;
 
 				li {
